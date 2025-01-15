@@ -15,23 +15,34 @@ class LoginPage extends StatelessWidget {
               Text(
                 'Sign in',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Chivo',
+                    color: Colors.black),
               ),
               SizedBox(height: 8),
               Text(
                 'Stay updated on your professional world.',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
+                style: TextStyle(
+                  fontSize: 14.0,
+                  color: Colors.grey[600],
+                  fontFamily: 'Chivo',
+                ),
               ),
-              SizedBox(height: 32),
+              SizedBox(height: 35),
 
-              // Email or Phone Field
+              // Email Field
               TextField(
                 decoration: InputDecoration(
-                  labelText: 'Email or phone',
+                  labelText: 'Email',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
+                ),
+                style: TextStyle(
+                  fontFamily: 'Chivo', // Use the Chivo font here
                 ),
               ),
               SizedBox(height: 16),
@@ -57,8 +68,11 @@ class LoginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
+                style: TextStyle(
+                  fontFamily: 'Chivo', // Use the Chivo font here
+                ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 0),
 
               // Forgot Password Link
               Align(
@@ -68,13 +82,33 @@ class LoginPage extends StatelessWidget {
                     Navigator.pushNamed(context, '/forgot-password');
                     print('Forgot Password clicked');
                   },
-                  child: Text(
-                    'Forgot password?',
-                    style: TextStyle(color: Colors.blue),
+                  child: Stack(
+                    alignment: Alignment.bottomCenter,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 2.0),
+                        child: Text(
+                          'Forgot password?',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Chivo',
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        child: Container(
+                          color: Colors.black,
+                          height: 2,
+                          width: 124,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 14),
 
               // Sign In Button
               ElevatedButton(
@@ -90,10 +124,26 @@ class LoginPage extends StatelessWidget {
                 },
                 child: Text(
                   'Sign in',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.white,
+                    fontFamily: 'Chivo',
+                  ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 12),
+
+              // Privacy Policy Text
+              Text(
+                'You agree to User Agreement, Privacy Policy, and Cookie Policy.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 11.0,
+                  color: Colors.grey[600],
+                  fontFamily: 'Chivo',
+                ),
+              ),
+              SizedBox(height: 12),
 
               Row(
                 children: [
@@ -102,7 +152,10 @@ class LoginPage extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: Text(
                       'or',
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontFamily: 'Chivo',
+                      ),
                     ),
                   ),
                   Expanded(child: Divider()),
@@ -126,7 +179,10 @@ class LoginPage extends StatelessWidget {
                 ),
                 label: Text(
                   'Create a New Account',
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Chivo',
+                  ),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/sign-up');
@@ -142,13 +198,25 @@ class LoginPage extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: Text(
                       'or',
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.grey, fontFamily: 'Chivo'),
                     ),
                   ),
                   Expanded(child: Divider()),
                 ],
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 10),
+
+              Text(
+                'Agree and sign in with',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12.0,
+                  color: Colors.grey[600],
+                  fontFamily: 'Chivo',
+                ),
+              ),
+
+              SizedBox(height: 10),
 
               // Google Sign In Button
               OutlinedButton.icon(
@@ -160,12 +228,15 @@ class LoginPage extends StatelessWidget {
                   side: BorderSide(color: Colors.grey),
                 ),
                 icon: Image.asset(
-                  'assets/images/google_icon.png', // Google icon added here
+                  'assets/images/google_icon.png',
                   height: 18.0,
                 ),
                 label: Text(
                   'Continue with Google',
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Chivo',
+                  ),
                 ),
                 onPressed: () {
                   print('Google Sign-In clicked');
@@ -182,10 +253,14 @@ class LoginPage extends StatelessWidget {
                   ),
                   side: BorderSide(color: Colors.grey),
                 ),
-                icon: Icon(Icons.apple, size: 24.0),
+                icon: Icon(
+                  Icons.apple,
+                  size: 24.0,
+                  color: Colors.black,
+                ),
                 label: Text(
                   'Sign in with Apple',
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.black, fontFamily: 'Chivo'),
                 ),
                 onPressed: () {
                   print('Apple Sign-In clicked');
@@ -193,13 +268,6 @@ class LoginPage extends StatelessWidget {
               ),
 
               SizedBox(height: 16),
-
-              // Privacy Policy Text
-              Text(
-                'You agree to User Agreement, Privacy Policy, and Cookie Policy.',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 12.0, color: Colors.grey[600]),
-              ),
             ],
           ),
         ),
@@ -211,4 +279,3 @@ class LoginPage extends StatelessWidget {
 void main() => runApp(MaterialApp(
       home: LoginPage(),
     ));
-

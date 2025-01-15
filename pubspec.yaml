@@ -12,8 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-
-
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
@@ -26,7 +24,12 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/google_icon.png
-    
+
+  fonts:
+    - family: Chivo
+      fonts:
+        - asset: assets/fonts/Chivo-VariableFont_wght.ttf
+
   uses-material-design: true
 
 
