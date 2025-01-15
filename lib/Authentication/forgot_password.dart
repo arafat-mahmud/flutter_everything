@@ -15,13 +15,13 @@ class ForgotPasswordPage extends StatelessWidget {
               Text(
                 'Forgot Password',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, fontFamily: 'Chivo'),
               ),
               SizedBox(height: 8),
               Text(
                 'Enter your email to reset your password.',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
+                style: TextStyle(fontSize: 14.0, color: Colors.grey[600], fontFamily: 'Chivo'),
               ),
               SizedBox(height: 32),
 
@@ -50,7 +50,7 @@ class ForgotPasswordPage extends StatelessWidget {
                 },
                 child: Text(
                   'Reset Password',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  style: TextStyle(fontSize: 16.0, color: Colors.white, fontFamily: 'Chivo'),
                 ),
               ),
               SizedBox(height: 16),
@@ -62,7 +62,7 @@ class ForgotPasswordPage extends StatelessWidget {
                 },
                 child: Text(
                   'Back to Sign in',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.black, fontFamily: 'Chivo'),
                 ),
               ),
             ],

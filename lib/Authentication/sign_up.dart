@@ -15,13 +15,13 @@ class SignUpPage extends StatelessWidget {
               Text(
                 'Sign up',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, fontFamily: 'Chivo'),
               ),
               SizedBox(height: 8),
               Text(
                 'Make the most of your professional life',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 14.0, color: Colors.grey[600]),
+                style: TextStyle(fontSize: 14.0, color: Colors.grey[600], fontFamily: 'Chivo'),
               ),
               SizedBox(height: 32),
 
@@ -85,7 +85,7 @@ class SignUpPage extends StatelessWidget {
                 },
                 child: Text(
                   'Sign up',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  style: TextStyle(fontSize: 16.0, color: Colors.white, fontFamily: 'Chivo'),
                 ),
               ),
               SizedBox(height: 16),
@@ -97,7 +97,7 @@ class SignUpPage extends StatelessWidget {
                 },
                 child: Text(
                   'Already have an account? Sign in',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.black, fontFamily: 'Chivo'),
                 ),
               ),
             ],
